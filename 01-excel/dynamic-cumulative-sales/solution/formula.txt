@@ -1,0 +1,11 @@
+=LET(
+ desValueToFind, $A4,
+ desRangeToMatch, 'Store 1'!$A$1:$A$12,
+ valueRangeToCalculate, 'Store 1'!$B$1:$M$12,
+
+ rowNum, MATCH(desValueToFind, desRangeToMatch, 0),
+ startRange, INDEX(valueRangeToCalculate, rowNum, 1),
+ endRange, INDEX(valueRangeToCalculate, rowNum, param_lookup_value),
+
+ SUM(startRange:endRange)
+)
