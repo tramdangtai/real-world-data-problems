@@ -21,7 +21,7 @@ Thay vì tập trung vào tool, repo này tập trung vào:
 
 ### 📗 Excel (thực tế doanh nghiệp)
 
-1. Dynamic cumulative sales (data nằm ngang, không được restructure, xử lý dữ liệu với constraint thực tế) [repo](https://github.com/tramdangtai/real-world-data-problems/tree/main/01-excel/dynamic-cumulative-sales)
+1. Dynamic cumulative sales (data nằm ngang, không được restructure, xử lý dữ liệu với constraint thực tế). [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/01-excel/dynamic-cumulative-sales)
 
 👉 Đây là những bài toán mình gặp thường xuyên trong môi trường:
 - Data không “đẹp”
@@ -32,7 +32,7 @@ Thay vì tập trung vào tool, repo này tập trung vào:
 
 ### 📊 Power Query
 
-1. Dynamic File Filtering by Year-Month (Power Query M)
+1. Dynamic File Filtering by Year-Month (Power Query M). [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/dynamic-file-filtering-by-year-month)
 
 👉 Đây là những bài toán mình gặp thường xuyên về:
 - Tối ưu hiệu suất
@@ -51,7 +51,7 @@ Thay vì tập trung vào tool, repo này tập trung vào:
 Thông thường mình sẽ đi theo flow:
 
 1. Hiểu rõ yêu cầu (thường là mơ hồ)
-2. Xác định constraint (rất quan trọng)
+2. Xác định constraint, mục tiêu (rất quan trọng)
 3. Break bài toán thành các phần nhỏ
 4. Tìm hướng giải (có thể sai)
 5. Verify lại logic
@@ -72,21 +72,6 @@ Mà để:
 
 Phần còn lại:
 → mình tự kiểm chứng và hoàn thiện
-
----
-
-## 💭 Một vài điều mình nhận ra
-
-Trong công việc data thực tế:
-
-- Không phải lúc nào cũng có data “chuẩn”
-- Không phải lúc nào cũng được dùng tool “xịn”
-- Và không phải bài toán nào cũng “đẹp”
-
-Nhưng:
-
-> Chính những constraint đó  
-> lại giúp mình hiểu sâu hơn về vấn đề
 
 ---
 
