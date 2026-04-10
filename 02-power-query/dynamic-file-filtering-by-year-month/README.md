@@ -237,5 +237,5 @@ FILTER rows WHERE ANY(condition over a list)
 ```
 
 ## 📁 Files
-- [Folder]()
-- [Solution]()
+- [Folder Data](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/dynamic-file-filtering-by-year-month/data)
+- [Solution](https://github.com/tramdangtai/real-world-data-problems/blob/main/02-power-query/dynamic-file-filtering-by-year-month/solution/solution.txt)
