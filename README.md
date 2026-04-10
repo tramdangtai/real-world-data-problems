@@ -21,8 +21,7 @@ Thay vì tập trung vào tool, repo này tập trung vào:
 
 ### 📗 Excel (thực tế doanh nghiệp)
 
-- Dynamic cumulative sales (data nằm ngang, không được restructure)
-- Các case xử lý dữ liệu với constraint thực tế
+1. Dynamic cumulative sales (data nằm ngang, không được restructure, xử lý dữ liệu với constraint thực tế) [repo](https://github.com/tramdangtai/real-world-data-problems/tree/main/01-excel/dynamic-cumulative-sales)
 
 👉 Đây là những bài toán mình gặp thường xuyên trong môi trường:
 - Data không “đẹp”
@@ -31,7 +30,15 @@ Thay vì tập trung vào tool, repo này tập trung vào:
 
 ---
 
-### 📊 Power Query (đang cập nhật)
+### 📊 Power Query
+
+1. Dynamic File Filtering by Year-Month (Power Query M)
+
+👉 Đây là những bài toán mình gặp thường xuyên về:
+- Tối ưu hiệu suất
+- Cách làm cũ (tồn đọng bất cập) & cách mới (giải quyết tồn đọng, cải thiện hơn)
+- Code cần clean hơn
+- Code không tái sử dụng được
 
 ---
 
