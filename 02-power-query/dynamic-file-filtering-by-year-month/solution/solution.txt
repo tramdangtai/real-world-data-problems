@@ -1,0 +1,29 @@
+let
+    // Replace with your folder path
+    param_folderPath = "H:\My Drive\02-power-query\dynamic-file-filtering-by-year-month\data"
+
+    Source = Folder.Files(param_folderPath),
+
+    // Create date  
+    currentDate = Date.From(DateTime.LocalNow()),  
+    lastMonthDate = Date.AddMonths(currentDate, -1),  
+    
+    // Format function  
+    formatMonth = (d as date) => Date.ToText(d, "yyyy_MM"),  
+    
+    // Create list of filters  
+    monthFilters = {  
+        formatMonth(currentDate),  
+        formatMonth(lastMonthDate)  
+    },
+  
+    // Apply filter  
+    FilteredRows_TwoLatestMonths =   
+        Table.SelectRows(  
+            Source,   
+            each List.AnyTrue(  
+                List.Transform(monthFilters, (m) => Text.Contains([Name], m))  
+            )  
+        )
+in
+    FilteredRows_TwoLatestMonths
