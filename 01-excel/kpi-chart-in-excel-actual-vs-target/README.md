@@ -325,5 +325,5 @@ Insight:
 
 ## 📁 Files
 
-- data
-- solution
+- [data](https://github.com/tramdangtai/real-world-data-problems/blob/main/01-excel/kpi-chart-in-excel-actual-vs-target/data/)
+- [solution](https://github.com/tramdangtai/real-world-data-problems/blob/main/01-excel/kpi-chart-in-excel-actual-vs-target/solution/)
