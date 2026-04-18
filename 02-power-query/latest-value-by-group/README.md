@@ -357,6 +357,6 @@ fn_sum_latest_by_date(_, "latest_date_receving", "latest_qty_receving")
 ---
 
 ## 📁 File
-- [Data](02-power-query/latest-value-by-group/data)
-- [Solution](02-power-query/latest-value-by-group/solution)
+- [Data](/data)
+- [Solution](/solution)
 
