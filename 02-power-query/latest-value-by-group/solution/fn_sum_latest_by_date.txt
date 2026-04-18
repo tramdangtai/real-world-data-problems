@@ -1,0 +1,31 @@
+(fnTable as table, dateCol as text, valueCol as text) as number =>
+// Dùng trong Table.Group with purpose: calculate sum latest value of column (number type)
+// Example use: fn_sum_latest_by_date(_, "latest_date_receving", "latest_qty_receving")
+let
+    // Extract list
+    dates = Table.Column(fnTable, dateCol),
+    values = Table.Column(fnTable, valueCol),
+
+    // Latest date
+    latest = List.Max(dates),
+
+    // Positions (index)
+    positions = List.Positions(dates),
+
+    // Filter index theo latest date
+    filteredPositions =
+        List.Select(
+            positions,
+            (i) => dates{i} = latest
+        ),
+
+    // Sum value theo index đã filter
+    result =
+        List.Sum(
+            List.Transform(
+                filteredPositions,
+                (i) => values{i}
+            )
+        )
+in
+    result

@@ -1,0 +1,17 @@
+let
+    // Replace with your file path
+    param_filePath = "H:\My Drive\02-power-query\latest-value-by-group\data\Transfer Receipt 2025.csv",
+
+    Source = Csv.Document(File.Contents(param_filePath),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    ChangedType = Table.TransformColumnTypes(#"Promoted Headers",{{"Posting Date", type date}, {"SKU", type text}, {"Quantity", Int64.Type}, {"Location Code", type text}}),
+    GroupedRows = Table.Group(
+        ChangedType, 
+        {"SKU", "Location Code"}, 
+            {
+                {"latest_qty_transfer", each fn_sum_latest_by_date(_, "Posting Date", "Quantity"), Int64.Type}, 
+                {"latest_date_transfer", each List.Max([Posting Date]), type nullable date}
+            }
+        )
+in
+    GroupedRows
