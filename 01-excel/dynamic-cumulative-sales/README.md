@@ -283,3 +283,7 @@ Có một câu mình từng đọc:
 > “Một ngày nào đó, những mảnh ghép rời rạc sẽ tự kết nối lại.”
 
 Case này là một lần mình cảm nhận rõ điều đó.
+
+---
+
+> 🔗 This case is also shared on LinkedIn: [link bài post](https://www.linkedin.com/feed/update/urn:li:activity:7451925247735508993/)
