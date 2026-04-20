@@ -22,10 +22,12 @@ Thay vì tập trung vào tool, repo này tập trung vào:
 ### 📗 Excel (thực tế doanh nghiệp)
 
 1. Dynamic cumulative sales (data nằm ngang, không được restructure, xử lý dữ liệu với constraint thực tế). [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/01-excel/dynamic-cumulative-sales)
+2. KPI Chart in Excel - Actual vs Target with % Achieved (tạo custom chart, format chart thân thiện với user). [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/01-excel/kpi-chart-in-excel-actual-vs-target)
 
 👉 Đây là những bài toán mình gặp thường xuyên trong môi trường:
 - Data không “đẹp”
 - Không phải lúc nào cũng được chọn tool
+- Có những thứ cần custom chứ không có sẵn
 - Và Excel vẫn là công cụ chính
 
 ---
@@ -33,12 +35,14 @@ Thay vì tập trung vào tool, repo này tập trung vào:
 ### 📊 Power Query
 
 1. Dynamic File Filtering by Year-Month (Power Query M). [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/dynamic-file-filtering-by-year-month)
+2. Latest Value Extraction in Power Query (Correctness vs Performance). [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/latest-value-by-group)
 
 👉 Đây là những bài toán mình gặp thường xuyên về:
 - Tối ưu hiệu suất
 - Cách làm cũ (tồn đọng bất cập) & cách mới (giải quyết tồn đọng, cải thiện hơn)
 - Code cần clean hơn
 - Code không tái sử dụng được
+- Lỗi mình gặp mà mình không nhận ra.
 
 ---
 
