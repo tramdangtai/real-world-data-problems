@@ -1,0 +1,17 @@
+let
+    // Replace with your file path
+    param_filePath = "H:\github - real-world-data-problems\02-power-query\sku-replace-record-mapping-power-query\data\fact_sales_daily_level_sku_store_2026.csv",
+
+    Source = Csv.Document(File.Contents(param_filePath),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    ChangedType = Table.TransformColumnTypes(#"Promoted Headers",{{"sku", type text}, {"date", type date}, {"total_sold_qty", Int64.Type}}),
+    TransformColumns_ReplaceSKU = Table.TransformColumns(  
+ ChangedType,  
+	{{  
+		"sku",  
+		each Record.FieldOrDefault(MappingRecord, _, _),  
+		type text  
+	}}  
+)
+in
+    TransformColumns_ReplaceSKU
