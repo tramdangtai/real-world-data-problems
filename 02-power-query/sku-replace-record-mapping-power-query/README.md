@@ -324,5 +324,5 @@ Nhưng việc hiểu và quyết định áp dụng như thế nào vẫn là ph
 
 ## 📁 File
 
-- [Data](02-power-query/sku-replace-record-mapping-power-query/data)
-- [Solution](02-power-query/sku-replace-record-mapping-power-query/solution)
+- [Data](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/sku-replace-record-mapping-power-query/data)
+- [Solution](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/sku-replace-record-mapping-power-query/solution)
