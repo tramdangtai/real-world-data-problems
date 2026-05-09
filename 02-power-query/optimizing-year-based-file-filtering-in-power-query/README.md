@@ -1,7 +1,7 @@
 ---
 date: 2026-05-09
 ---
-# 📊 Dynamic File Filtering by Latest Years (Power Query)
+# 📊 Optimizing Year-Based File Filtering in Power Query
 
 ## 📌 Overview
 
