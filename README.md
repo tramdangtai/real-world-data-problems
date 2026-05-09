@@ -37,6 +37,7 @@ Thay vì tập trung vào tool, repo này tập trung vào:
 1. Dynamic File Filtering by Year-Month (Power Query M). [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/dynamic-file-filtering-by-year-month)
 2. Latest Value Extraction in Power Query (Correctness vs Performance). [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/latest-value-by-group)
 3. SKU Replace Mapping with Record Dictionary (Power Query). [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/sku-replace-record-mapping-power-query)
+4. Optimizing Year-Based File Filtering in Power Query. [repo_link](https://github.com/tramdangtai/real-world-data-problems/tree/main/02-power-query/optimizing-year-based-file-filtering-in-power-query)
 
 👉 Đây là những bài toán mình gặp thường xuyên về:
 - Tối ưu hiệu suất
