@@ -1,0 +1,12 @@
+let
+    // Please use your folder path instead
+    FolderPath = "H:\github - real-world-data-problems\02-power-query\optimizing-year-based-file-filtering-in-power-query\data",
+    Source = Folder.Files(FolderPath),
+    FilterFourLatestYear = Table.SelectRows(  
+        Source,   
+        each List.AnyTrue(  
+            List.Transform(param_list_lastFourYears_w_textFormat, (m) => Text.Contains([Name], m))  
+        )  
+    )
+in
+    FilterFourLatestYear

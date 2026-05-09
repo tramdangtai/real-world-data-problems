@@ -1,0 +1,6 @@
+let
+    CurrentYear = Date.Year(DateTime.LocalNow()),
+    LastThreeYears = {CurrentYear - 3 .. CurrentYear},
+    YearTextList = List.Transform(LastThreeYears, each Text.From(_))
+in
+    YearTextList
