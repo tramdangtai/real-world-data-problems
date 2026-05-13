@@ -1,0 +1,58 @@
+let
+    CurrentYear = Text.From(Date.Year(DateTime.LocalNow())),
+    CurrentMonth = Text.PadStart(
+        Text.From(Date.Month(DateTime.LocalNow())),
+        2,
+        "0"
+    ),
+    Companies =
+        {
+            "Company_A",
+            "Company_B"
+        },
+
+    // Please replace/use your SharePoint Site
+    SharePointSite = "https://yourcompany.sharepoint.com/sites/yoursite",
+
+    
+    Source = SharePoint.Contents(SharePointSite, [ApiVersion = 15]),
+    Projects = Source{[Name="Projects"]}[Content],
+    item_inventory_by_store = Projects{[Name="data"]}[Content],
+
+
+    fn_GetCompanyInventory =
+        (company as text) =>
+        let
+            CompanyFolder  =
+                item_inventory_by_store{[Name=company]}[Content],
+
+            YearFolder =
+                CompanyFolder{[Name=CurrentYear]}[Content],
+
+            FilteredFiles =
+                Table.SelectRows(
+                    YearFolder,
+                    each
+                        Text.StartsWith(
+                            [Name],
+                            "Items by Location Matrix_" & CurrentMonth & "_"
+                        )
+                        and Text.EndsWith([Name], ".xlsx")
+                ),
+
+            LatestFile =
+                fn_get_latest_excel_file(FilteredFiles)
+
+        in
+            LatestFile,
+
+    ImportedFiles =
+        List.Transform(
+            Companies,
+            each fn_GetCompanyInventory(_)
+        ),
+
+
+    CombinedInvFile = Table.Combine(ImportedFiles)
+in
+    CombinedInvFile

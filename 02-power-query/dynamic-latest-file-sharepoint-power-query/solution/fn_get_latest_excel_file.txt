@@ -1,0 +1,27 @@
+(source as table) as table =>
+let
+    AddSortKey =
+        Table.AddColumn(
+            source,
+            "SortKey",
+            each
+                let
+                    p = Text.Split([Name], "_")
+                in
+                    p{3} & p{1} & p{2},
+            type text
+        ),
+
+    MaxKey = List.Max(AddSortKey[SortKey]),
+
+    LatestFile =
+        Table.SelectRows(
+            AddSortKey,
+            each [SortKey] = MaxKey
+        ){0}[Content],
+
+    ImportedExcelWorkbook =
+        Excel.Workbook(LatestFile)
+
+in
+    ImportedExcelWorkbook
